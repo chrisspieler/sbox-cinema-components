@@ -16,6 +16,7 @@ public class BounceLightComponent : BaseComponent
 	/// </summary>
 	[Property] public static int BounceLightCookieSize { get; set; } = 32;
 	[Property] public bool EnableDebugVis { get; set; }
+	[Property] public int UpdatesPerSecond { get; set; } = 15;
 
 	private SpotLightComponent BounceLight { get; set; }
 	private float _screenDistanceFromProjector;
@@ -23,6 +24,7 @@ public class BounceLightComponent : BaseComponent
 	private Texture _downscaledTex { get; set; }
 	private Texture _multiplicandTex { get; set; }
 	private Texture _productTex { get; set; }
+	private TimeSince _lastShaderUpdate;
 
 
 	public override void OnEnabled()
@@ -40,9 +42,6 @@ public class BounceLightComponent : BaseComponent
 		BounceLight.Enabled = true;
 
 		InitGraphics();
-
-		BounceLight.Enabled = false;
-		BounceLight.Enabled = true;
 	}
 
 	public override void OnDisabled()
@@ -74,15 +73,19 @@ public class BounceLightComponent : BaseComponent
 		attenuation *= AttenuationFactor;
 		BounceLight.Attenuation = attenuation;
 
-		/* 
-		*  Here we daisy-chain three compute shaders to downscale, multiply, and blur the
-		*  main projector texture in order to create a fake bounce light effect.
-		*  I am CERTAIN that this is not the most efficient way to do this, but it works
-		*  for now, and someone with more HLSL knowledge could probably do it all in one shader.
-		*/
-		ProjectorShaders.DispatchDownscale( ProjectorLight.Cookie, _downscaledTex );
-		ProjectorShaders.DispatchMultiply( _downscaledTex, _multiplicandTex, _productTex );
-		ProjectorShaders.DispatchGaussianBlur( _productTex, BounceLight.Cookie );
+		if ( _lastShaderUpdate > 1f / UpdatesPerSecond)
+		{
+			/* 
+			*  Here we daisy-chain three compute shaders to downscale, multiply, and blur the
+			*  main projector texture in order to create a fake bounce light effect.
+			*  I am CERTAIN that this is not the most efficient way to do this, but it works
+			*  for now, and someone with more HLSL knowledge could probably do it all in one shader.
+			*/
+			ProjectorShaders.DispatchDownscale( ProjectorLight.Cookie, _downscaledTex );
+			ProjectorShaders.DispatchMultiply( _downscaledTex, _multiplicandTex, _productTex );
+			ProjectorShaders.DispatchGaussianBlur( _productTex, BounceLight.Cookie );
+			_lastShaderUpdate = 0f;
+		}
 
 		if ( EnableDebugVis )
 			DebugDrawShaderTextures();

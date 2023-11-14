@@ -139,7 +139,14 @@
           "BounceLightCookieSize": 64,
           "EnableDebugVis": true,
           "MaxDistance": 1024,
-          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc"
+          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
+          "UpdatesPerSecond": 5
+        },
+        {
+          "__type": "VideoPlayerComponent",
+          "__enabled": true,
+          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
+          "VideoPath": "videos/Jelly Belly Pet Rat Gummi Candy.mp4"
         }
       ]
     }
