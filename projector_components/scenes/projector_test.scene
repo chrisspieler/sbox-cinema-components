@@ -101,21 +101,6 @@
       ]
     },
     {
-      "Id": "932c0f34-1174-4839-a7eb-e8ff7d2c6ff0",
-      "Name": "Issue Repro",
-      "Enabled": false,
-      "Position": "0,0,0",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Components": [
-        {
-          "__type": "NanIssueReproComponent",
-          "__enabled": true
-        }
-      ]
-    },
-    {
       "Id": "e938c503-3594-48b1-afad-ebe1b99a2d32",
       "Name": "room_cap",
       "Enabled": true,
