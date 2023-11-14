@@ -1,23 +1,6 @@
 {
   "GameObjects": [
     {
-      "Id": "b06b100c-17d6-45bf-827d-79532055ebc2",
-      "Name": "Point Light",
-      "Enabled": true,
-      "Position": "-3.201903,15.48644,154.6142",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Components": [
-        {
-          "__type": "PointLightComponent",
-          "__enabled": true,
-          "LightColor": "0.07708,0.08255,0.08416,1",
-          "Radius": 400
-        }
-      ]
-    },
-    {
       "Id": "776d65a5-fcd2-4f5e-adcb-e92fc738b8d2",
       "Name": "Player",
       "Enabled": true,
@@ -105,7 +88,7 @@
       "Name": "room_cap",
       "Enabled": true,
       "Position": "200,0,0",
-      "Rotation": "-0.00000006567284,0,0,1",
+      "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
       "__Prefab": "prefabs/room_cap.object"
@@ -129,6 +112,36 @@
       "Scale": "1,1,1",
       "Tags": "",
       "__Prefab": "prefabs/room_cap.object"
+    },
+    {
+      "Id": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
+      "Name": "Spot Light",
+      "Enabled": true,
+      "Position": "-287.9561,0,128.9237",
+      "Rotation": "0,0.01687073,0,0.9998577",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "SpotLightComponent",
+          "__enabled": true,
+          "Attenuation": 0.07,
+          "ConeInner": 2.73,
+          "ConeOuter": 9.46,
+          "Cookie": "materials/cookies/border_collies.vtex",
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1024
+        },
+        {
+          "__type": "BounceLightComponent",
+          "__enabled": true,
+          "AttenuationFactor": 1,
+          "BounceLightCookieSize": 64,
+          "EnableDebugVis": true,
+          "MaxDistance": 1024,
+          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc"
+        }
+      ]
     }
   ],
   "__references": []
