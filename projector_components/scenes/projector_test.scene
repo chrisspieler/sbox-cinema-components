@@ -1,0 +1,150 @@
+{
+  "GameObjects": [
+    {
+      "Id": "b06b100c-17d6-45bf-827d-79532055ebc2",
+      "Name": "Point Light",
+      "Enabled": true,
+      "Position": "-3.201903,15.48644,154.6142",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "PointLightComponent",
+          "__enabled": true,
+          "LightColor": "0.07708,0.08255,0.08416,1",
+          "Radius": 400
+        }
+      ]
+    },
+    {
+      "Id": "776d65a5-fcd2-4f5e-adcb-e92fc738b8d2",
+      "Name": "Player",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0.01047179,0.9999452",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "776d65a5-fcd2-4f5e-adcb-e92fc738b8d2",
+          "Body": "776d65a5-fcd2-4f5e-adcb-e92fc738b8d2",
+          "CameraDistance": 20,
+          "Eye": "ff42fea4-1070-4367-a7b2-9b37d9f26e69",
+          "FirstPerson": true,
+          "Gravity": "0,0,800"
+        },
+        {
+          "__type": "CitizenAnimation",
+          "__enabled": true,
+          "EyeSource": "ff42fea4-1070-4367-a7b2-9b37d9f26e69",
+          "Height": 1,
+          "Target": "776d65a5-fcd2-4f5e-adcb-e92fc738b8d2"
+        },
+        {
+          "__type": "AnimatedModelComponent",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "ShouldCastShadows": true,
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "912e5c62-9f09-4aee-8174-fd6991d1d7c3",
+          "Name": "Camera",
+          "Enabled": true,
+          "Position": "0,0.0000000006984919,70",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "__enabled": true,
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 100,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "TargetEye": "None",
+              "ZFar": 10000,
+              "ZNear": 4
+            }
+          ]
+        },
+        {
+          "Id": "ff42fea4-1070-4367-a7b2-9b37d9f26e69",
+          "Name": "Eyes",
+          "Enabled": true,
+          "Position": "0,0.000000196929,70",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": ""
+        }
+      ]
+    },
+    {
+      "Id": "932c0f34-1174-4839-a7eb-e8ff7d2c6ff0",
+      "Name": "Issue Repro",
+      "Enabled": false,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "NanIssueReproComponent",
+          "__enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "e938c503-3594-48b1-afad-ebe1b99a2d32",
+      "Name": "room_cap",
+      "Enabled": true,
+      "Position": "200,0,0",
+      "Rotation": "-0.00000006567284,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "__Prefab": "prefabs/room_cap.object"
+    },
+    {
+      "Id": "58e94ca6-e425-4c30-a7db-aa07919f7f0b",
+      "Name": "room_2w",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "__Prefab": "prefabs/room_2w.object"
+    },
+    {
+      "Id": "9ba90d4d-a11d-4179-b41e-1144dc3b739f",
+      "Name": "room_cap",
+      "Enabled": true,
+      "Position": "-200,0,0",
+      "Rotation": "-0,0,1,-0.0000006397578",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "__Prefab": "prefabs/room_cap.object"
+    }
+  ],
+  "__references": []
+}
