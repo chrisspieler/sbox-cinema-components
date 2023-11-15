@@ -114,48 +114,11 @@
       "__Prefab": "prefabs/room_cap.object"
     },
     {
-      "Id": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
-      "Name": "Projector",
-      "Enabled": true,
-      "Position": "-287.9561,0,128.9237",
-      "Rotation": "0,0.01687073,0,0.9998577",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Components": [
-        {
-          "__type": "SpotLightComponent",
-          "__enabled": true,
-          "Attenuation": 0.07,
-          "ConeInner": 2.73,
-          "ConeOuter": 9.46,
-          "Cookie": "materials/cookies/border_collies.vtex",
-          "LightColor": "0.91373,0.98039,1,1",
-          "Radius": 1024
-        },
-        {
-          "__type": "BounceLightComponent",
-          "__enabled": true,
-          "AttenuationFactor": 1,
-          "BounceLightCookieSize": 64,
-          "EnableDebugVis": true,
-          "MaxDistance": 1024,
-          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
-          "UpdatesPerSecond": 60
-        },
-        {
-          "__type": "VideoPlayerComponent",
-          "__enabled": true,
-          "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
-          "VideoPath": "videos/Jelly Belly Pet Rat Gummi Candy.mp4"
-        }
-      ]
-    },
-    {
       "Id": "9dd2ae1b-34bc-4897-88fa-b105d05c754d",
-      "Name": "Spot Light",
-      "Enabled": false,
-      "Position": "0,0,80.49123",
-      "Rotation": "0,0,0,1",
+      "Name": "Test Light",
+      "Enabled": true,
+      "Position": "5.513776,-55.0202,80.49123",
+      "Rotation": "-0.000000003524261,0.0000000000000001824276,-0.05912726,0.9982508",
       "Scale": "1,1,1",
       "Tags": "",
       "Components": [
@@ -173,9 +136,58 @@
           "__type": "LightCookieDebugComponent",
           "__enabled": true,
           "SpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
+        },
+        {
+          "__type": "LightCookieGeneratorComponent",
+          "__enabled": true,
+          "CookieSize": "32,32",
+          "GenerationInterval": 5,
+          "SpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
+        }
+      ]
+    },
+    {
+      "Id": "91134f93-25f7-42be-be94-53713cff1122",
+      "Name": "Test Light (1)",
+      "Enabled": true,
+      "Position": "-36.55247,-6.980069,80.49123",
+      "Rotation": "0.00000001848733,0.0000000000000005375202,0.3101659,0.9506828",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "SpotLightComponent",
+          "__enabled": true,
+          "Attenuation": 0.12,
+          "ConeInner": 0,
+          "ConeOuter": 48.71,
+          "Cookie": null,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 870.9333
+        },
+        {
+          "__type": "LightCookieDebugComponent",
+          "__enabled": true,
+          "SpotLight": "91134f93-25f7-42be-be94-53713cff1122"
+        },
+        {
+          "__type": "LightCookieGeneratorComponent",
+          "__enabled": true,
+          "CookieSize": "32,32",
+          "GenerationInterval": 5,
+          "SpotLight": "91134f93-25f7-42be-be94-53713cff1122"
         }
       ]
     }
   ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "TimeScale": 1,
+    "ThreadedAnimation": true,
+    "UseFixedUpdate": true
+  },
+  "Title": "projector_test",
+  "Description": "",
   "__references": []
 }
