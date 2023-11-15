@@ -8,7 +8,7 @@ public class LightCookieGeneratorComponent : BaseComponent
 	/// </summary>
 	[Property] public float GenerationInterval { get; set; } = 1f;
 	[Property] public Vector2 CookieSize { get; set; } = new Vector2( 64 );
-	private RealTimeSince _lastGenerationTime { get; set; }
+	private RealTimeSince _lastGenerationTime { get; set; } = 0f;
 
 	public override void Update()
 	{
@@ -17,21 +17,25 @@ public class LightCookieGeneratorComponent : BaseComponent
 		if (_lastGenerationTime > GenerationInterval)
 		{
 			_lastGenerationTime = 0f;
-			SpotLight.Cookie = GenerateCookie();
+			UpdateCookie();
 		}
 	}
 
-	private Texture GenerateCookie()
+	private void UpdateCookie()
 	{
-		var cookie = Texture.Create( (int)CookieSize.x, (int)CookieSize.y )
-			.WithUAVBinding()
-			.Finish();
-		var data = new Color32[(int)CookieSize.x * (int)CookieSize.y];
+		if ( SpotLight.Cookie == null )
+		{
+			SpotLight.Cookie = Texture.Create( (int)CookieSize.x, (int)CookieSize.y )
+				.WithUAVBinding()
+				.Finish();
+		}
+		// If we didn't create the cookie texture, its size might differ from CookieSize.
+		var cookieSize = SpotLight.Cookie.Size;
+		var data = new Color32[(int)cookieSize.x * (int)cookieSize.y];
 		for(int i = 0; i < data.Length; i++ )
 		{
 			data[i] = Color.Random;
 		}
-		cookie.Update( data );
-		return cookie;
+		SpotLight.Cookie.Update( data );
 	}
 }

@@ -38,8 +38,8 @@
         },
         {
           "__type": "AnimatedModelComponent",
-          "__enabled": false,
-          "BodyGroups": 18446744073709551615,
+          "__enabled": true,
+          "BodyGroups": 18446744073709551614,
           "CreateBoneObjects": false,
           "MaterialGroup": null,
           "MaterialOverride": null,
@@ -84,16 +84,6 @@
       ]
     },
     {
-      "Id": "e938c503-3594-48b1-afad-ebe1b99a2d32",
-      "Name": "room_cap",
-      "Enabled": true,
-      "Position": "200,0,0",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "__Prefab": "prefabs/room_cap.object"
-    },
-    {
       "Id": "58e94ca6-e425-4c30-a7db-aa07919f7f0b",
       "Name": "room_2w",
       "Enabled": true,
@@ -117,17 +107,17 @@
       "Id": "9dd2ae1b-34bc-4897-88fa-b105d05c754d",
       "Name": "Test Light",
       "Enabled": true,
-      "Position": "5.513776,-55.0202,80.49123",
-      "Rotation": "-0.000000003524261,0.0000000000000001824276,-0.05912726,0.9982508",
+      "Position": "0,0,168.6799",
+      "Rotation": "-0.000000009369647,0.09845968,0.0000000003463904,0.995141",
       "Scale": "1,1,1",
       "Tags": "",
       "Components": [
         {
           "__type": "SpotLightComponent",
           "__enabled": true,
-          "Attenuation": 0.12,
+          "Attenuation": 0.22,
           "ConeInner": 0,
-          "ConeOuter": 48.71,
+          "ConeOuter": 14.64,
           "Cookie": null,
           "LightColor": "0.91373,0.98039,1,1",
           "Radius": 870.9333
@@ -138,44 +128,305 @@
           "SpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
         },
         {
-          "__type": "LightCookieGeneratorComponent",
+          "__type": "BounceLightComponent",
+          "__enabled": false,
+          "AttenuationFactor": 1,
+          "BounceLightCookieSize": 128,
+          "EnableDebugVis": true,
+          "MaxDistance": 1024,
+          "ProjectorLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d",
+          "UpdatesPerSecond": 15
+        },
+        {
+          "__type": "LightCookieColorPadComponent",
           "__enabled": true,
-          "CookieSize": "32,32",
-          "GenerationInterval": 5,
-          "SpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
+          "InputTexture": "materials/cookies/trigger_remove.vtex",
+          "Margin": 0.7,
+          "PadColor": "0,0,0,1",
+          "TargetSpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
         }
       ]
     },
     {
-      "Id": "91134f93-25f7-42be-be94-53713cff1122",
-      "Name": "Test Light (1)",
+      "Id": "b43099c9-86a1-45ef-a9d0-47665bc15885",
+      "Name": "room_screen_cap",
       "Enabled": true,
-      "Position": "-36.55247,-6.980069,80.49123",
-      "Rotation": "0.00000001848733,0.0000000000000005375202,0.3101659,0.9506828",
+      "Position": "200,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "__Prefab": "prefabs/room_screen_cap.object"
+    },
+    {
+      "Id": "050fb0b9-d326-450e-bcba-93f134ad1674",
+      "Name": "Point Light",
+      "Enabled": true,
+      "Position": "-275.4594,-6.050779,187.3317",
+      "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
       "Components": [
         {
-          "__type": "SpotLightComponent",
+          "__type": "PointLightComponent",
           "__enabled": true,
-          "Attenuation": 0.12,
-          "ConeInner": 0,
-          "ConeOuter": 48.71,
-          "Cookie": null,
-          "LightColor": "0.91373,0.98039,1,1",
-          "Radius": 870.9333
+          "LightColor": "0.75892,0.87851,0.88614,1",
+          "Radius": 614.1336
+        }
+      ]
+    },
+    {
+      "Id": "a4e07b6b-18bb-4aa4-8ad7-eecce89d9cde",
+      "Name": "Volumetric Fog",
+      "Enabled": true,
+      "Position": "0,0,98.35545",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "VolumetricFogVolume",
+          "__enabled": true,
+          "Bounds": {
+            "Mins": "-300,-100,-100",
+            "Maxs": "300,100,100"
+          },
+          "FalloffExponent": 0.40000004,
+          "Strength": 2.2000017
+        }
+      ]
+    },
+    {
+      "Id": "333c5b92-3156-4dd3-ae41-f18e88130e00",
+      "Name": "Seating",
+      "Enabled": true,
+      "Position": "110.7939,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Children": [
+        {
+          "Id": "5e3a1e24-c36b-4f7c-9439-33ba5e16faba",
+          "Name": "cinemachair01",
+          "Enabled": true,
+          "Position": "-53.94157,-72.23287,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         },
         {
-          "__type": "LightCookieDebugComponent",
-          "__enabled": true,
-          "SpotLight": "91134f93-25f7-42be-be94-53713cff1122"
+          "Id": "dcbafe30-8dea-441b-9c9a-ba8e49b65f2f",
+          "Name": "cinemachair01 (1)",
+          "Enabled": true,
+          "Position": "-53.9416,-37.28072,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         },
         {
-          "__type": "LightCookieGeneratorComponent",
-          "__enabled": true,
-          "CookieSize": "32,32",
-          "GenerationInterval": 5,
-          "SpotLight": "91134f93-25f7-42be-be94-53713cff1122"
+          "Id": "372718c7-6911-4293-bf07-ce0cc355dae4",
+          "Name": "cinemachair01 (2)",
+          "Enabled": true,
+          "Position": "-53.9416,79.16497,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "7ddee4d5-7467-4ac1-b1d3-e3c3624feb04",
+          "Name": "cinemachair01 (3)",
+          "Enabled": true,
+          "Position": "-53.9416,45.20615,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "18f19694-cc11-46de-b8d5-97a9792261be",
+          "Name": "cinemachair01 (4)",
+          "Enabled": true,
+          "Position": "9.870949,45.20615,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "cbfaeca3-f8ce-4fdb-9e29-f9b4b2cc0272",
+          "Name": "cinemachair01 (6)",
+          "Enabled": true,
+          "Position": "9.870949,-71.15331,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "6e0b4792-da2c-4582-a124-413c0ea1d642",
+          "Name": "cinemachair01 (7)",
+          "Enabled": true,
+          "Position": "9.870949,-37.56006,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "20b37bf2-bb2b-41ba-bb90-94ecdf99d484",
+          "Name": "cinemachair01 (5)",
+          "Enabled": true,
+          "Position": "9.870949,76.84503,0.125",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": null,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/cinemachair/cinemachair01.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     }

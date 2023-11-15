@@ -1,0 +1,574 @@
+{
+  "RootObject": {
+    "Id": "e938c503-3594-48b1-afad-ebe1b99a2d32",
+    "Name": "room_screen_cap",
+    "Enabled": true,
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Children": [
+      {
+        "Id": "540472e3-fb01-49ab-88c9-5ea218319986",
+        "Name": "Floor NW",
+        "Enabled": true,
+        "Position": "50,50,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "bd547a68-b63e-4c7b-84e8-f2393f92c8f3",
+        "Name": "Floor NE",
+        "Enabled": true,
+        "Position": "50,-50,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "d79bc997-d06f-4bc0-9550-65cad0a2127d",
+        "Name": "Floor SE",
+        "Enabled": true,
+        "Position": "-50,-50,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "fce50745-badf-4da2-b16c-45ad22575de0",
+        "Name": "Floor SW",
+        "Enabled": true,
+        "Position": "-50,50,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a20820a3-db7d-4715-81ce-fa2016b6ae57",
+        "Name": "Wall N",
+        "Enabled": true,
+        "Position": "100,50,50",
+        "Rotation": "-0.707107,-0.0000004523773,0.7071065,-0.000000452377",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "d423c487-62fb-4019-a2d3-8c30b7105cb8",
+        "Name": "Wall N (2)",
+        "Enabled": true,
+        "Position": "100,50,150",
+        "Rotation": "-0.707107,-0.0000004523773,0.7071065,-0.000000452377",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "c38514b4-d065-412b-867c-4a4c00da1ea5",
+        "Name": "Wall N (1)",
+        "Enabled": true,
+        "Position": "100,-50,50",
+        "Rotation": "-0.707107,-0.0000004523773,0.7071065,-0.000000452377",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "8879736a-a1ea-40f7-b1a2-e4102754d832",
+        "Name": "Wall N (3)",
+        "Enabled": true,
+        "Position": "100,-50,150",
+        "Rotation": "-0.707107,-0.0000004523773,0.7071065,-0.000000452377",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "276a7470-28c4-4c4d-8229-01c63146c035",
+        "Name": "Wall E",
+        "Enabled": true,
+        "Position": "-50,-100,50",
+        "Rotation": "-0.5000005,0.5000002,0.4999999,0.4999995",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7be171c5-05b4-4662-9724-dd225f6c0cf1",
+        "Name": "Wall E (3)",
+        "Enabled": true,
+        "Position": "-50,-100,150",
+        "Rotation": "-0.5000005,0.5000002,0.4999999,0.4999995",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "09ced753-49a4-4c78-b226-d05d78fda3d1",
+        "Name": "Wall E (1)",
+        "Enabled": true,
+        "Position": "50,-100,50",
+        "Rotation": "-0.5000005,0.5000002,0.4999999,0.4999995",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "e2f4fdbe-9b79-474a-a9ce-ddaad2e47bdb",
+        "Name": "Wall E (2)",
+        "Enabled": true,
+        "Position": "50,-100,150",
+        "Rotation": "-0.5000005,0.5000002,0.4999999,0.4999995",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "71adeed9-be55-4eb0-b847-8f93a0d7140c",
+        "Name": "Wall W",
+        "Enabled": true,
+        "Position": "-50,100,50",
+        "Rotation": "-0.4998778,-0.4998787,0.5001213,-0.5001222",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "1989f870-8674-456b-b4f4-3507a79df017",
+        "Name": "Wall W (2)",
+        "Enabled": true,
+        "Position": "-50,100,150",
+        "Rotation": "-0.4998778,-0.4998787,0.5001213,-0.5001222",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "77a7e129-9c4d-4b0c-9806-1bd3c0607d2d",
+        "Name": "Wall W (1)",
+        "Enabled": true,
+        "Position": "50,100,50",
+        "Rotation": "-0.4998778,-0.4998787,0.5001213,-0.5001222",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "a3c57b8f-099b-4d0d-8493-e650260946bd",
+        "Name": "Wall W (3)",
+        "Enabled": true,
+        "Position": "50,100,150",
+        "Rotation": "-0.4998778,-0.4998787,0.5001213,-0.5001222",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7738b328-844b-4af9-aa07-a69c728ceb0f",
+        "Name": "Ceiling NW",
+        "Enabled": true,
+        "Position": "50,50,200",
+        "Rotation": "-0,1,-0,-0.0000006397578",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "38b31260-0739-4d12-8da0-612db31220d3",
+        "Name": "Ceiling NE",
+        "Enabled": true,
+        "Position": "50,-50,200",
+        "Rotation": "-0,1,-0,-0.0000006397578",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "7b8b6a2a-1f81-4fd8-a22b-c35bb671fdab",
+        "Name": "Ceiling SE",
+        "Enabled": true,
+        "Position": "-50,-50,200",
+        "Rotation": "-0,1,-0,-0.0000006397578",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "16c4f599-b4d4-4224-8cb7-147d4d3bacb1",
+        "Name": "Ceiling SW",
+        "Enabled": true,
+        "Position": "-50,50,200",
+        "Rotation": "-0,1,-0,-0.0000006397578",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": null,
+            "Model": "models/dev/plane.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ColliderBoxComponent",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Scale": "100,100,0.25",
+            "Static": true,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "__references": []
+}
