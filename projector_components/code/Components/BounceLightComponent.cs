@@ -26,7 +26,6 @@ public class BounceLightComponent : BaseComponent
 	private Texture _productTex { get; set; }
 	private TimeSince _lastShaderUpdate;
 
-
 	public override void OnEnabled()
 	{
 		if ( BounceLight == null )
@@ -37,7 +36,6 @@ public class BounceLightComponent : BaseComponent
 			BounceLight.Radius = 1024f;
 			BounceLight.ConeOuter = 80f;
 			BounceLight.ConeInner = 0f;
-			BounceLight.Cookie = ProjectorLight.Cookie;
 		}
 		BounceLight.Enabled = true;
 
@@ -93,10 +91,8 @@ public class BounceLightComponent : BaseComponent
 
 	private void InitGraphics()
 	{
-		Texture createTexture() => Texture.Create( BounceLightCookieSize, BounceLightCookieSize)
+		Texture createTexture() => Texture.Create( BounceLightCookieSize, BounceLightCookieSize )
 			.WithUAVBinding()
-			.WithFormat( ImageFormat.RGBA8888 )
-			.WithDynamicUsage()
 			.Finish();
 
 		_downscaledTex = createTexture();
@@ -109,8 +105,6 @@ public class BounceLightComponent : BaseComponent
 		var largeMaskTex = Texture.Load( FileSystem.Mounted, "materials/cookies/box_soft.vtex" );
 		ProjectorShaders.DispatchDownscale( largeMaskTex, _multiplicandTex );
 	}
-
-
 
 	private void DebugDrawShaderTextures()
 	{

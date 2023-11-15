@@ -115,7 +115,7 @@
     },
     {
       "Id": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
-      "Name": "Spot Light",
+      "Name": "Projector",
       "Enabled": true,
       "Position": "-287.9561,0,128.9237",
       "Rotation": "0,0.01687073,0,0.9998577",
@@ -140,13 +140,39 @@
           "EnableDebugVis": true,
           "MaxDistance": 1024,
           "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
-          "UpdatesPerSecond": 5
+          "UpdatesPerSecond": 60
         },
         {
           "__type": "VideoPlayerComponent",
           "__enabled": true,
           "ProjectorLight": "511fa87f-8fe6-4907-b96d-472a9e9906fc",
           "VideoPath": "videos/Jelly Belly Pet Rat Gummi Candy.mp4"
+        }
+      ]
+    },
+    {
+      "Id": "9dd2ae1b-34bc-4897-88fa-b105d05c754d",
+      "Name": "Spot Light",
+      "Enabled": false,
+      "Position": "0,0,80.49123",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "SpotLightComponent",
+          "__enabled": true,
+          "Attenuation": 0.12,
+          "ConeInner": 0,
+          "ConeOuter": 48.71,
+          "Cookie": null,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 870.9333
+        },
+        {
+          "__type": "LightCookieDebugComponent",
+          "__enabled": true,
+          "SpotLight": "9dd2ae1b-34bc-4897-88fa-b105d05c754d"
         }
       ]
     }
